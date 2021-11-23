@@ -1,3 +1,5 @@
+body {  min-width:290px; }
+
 nav {
     width: 100%;
     height:auto;
@@ -35,10 +37,6 @@ li > p {
 @media (max-width: 767px){
     #classic_menu{
         display: none;
-    }
-
-    #mobile_menu{
-        display: flex;
     }
 }
 
