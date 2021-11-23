@@ -28,48 +28,62 @@
 
     <body>
         <!--HEADER-->
-        <header class="container-fluid">
+        <header>
             <!--DESKTOP MENU-->
-            <nav id="classic_menu" class="row">
-                <div class="col-md-1" style="background: center / contain no-repeat url('./img/quechua_logo.png');"></div>
-                <ul class="col-md-8">
-                    <li>Vos activités</li>
-                    <li class="separator"></li>
-                    <li>Vos gammes</li>
-                    <li class="separator"></li>
-                    <li>Nos inspirations</li>
-                    <li class="separator"></li>
-                    <li>Les nouveautés</li>
-                    <li class="separator"></li>
-                    <li>La fidélité & moi</li>
-                </ul>
-                <ul class="col-md-2" style="display:flex;align-items: center;justify-content: space-evenly;">
-                    <li class="sep_nav_menu"></li>
-                    <li>
-                        <img src="img/quechua_logo.png" width="70" height=="70"/>
-                        <p>Mes envies</p>
-                    </li>
-                    <li>
-                        <img src="img/quechua_logo.png" width="70" height=="70"/>
-                        <p>Mes envies</p>
-                    </li>
-                    <li>
-                        <img src="img/quechua_logo.png" width="70" height=="70"/>
-                        <p>Mes envies</p>
-                    </li>
-                </ul>
+            <nav id="classic_menu" class="container-fluid">
+                <div>
+                    <div class="col-md-1" style="background: center / contain no-repeat url('./img/quechua_logo.png');"></div>
+                    <ul class="col-md-8">
+                        <li>Vos activités</li>
+                        <li class="separator"></li>
+                        <li>Vos gammes</li>
+                        <li class="separator"></li>
+                        <li>Nos inspirations</li>
+                        <li class="separator"></li>
+                        <li>Les nouveautés</li>
+                        <li class="separator"></li>
+                        <li>La fidélité & moi</li>
+                    </ul>
+                    <ul class="col-md-2" style="display:flex;align-items: center;justify-content: space-evenly;">
+                        <li class="sep_nav_menu"></li>
+                        <li>
+                            <img src="img/quechua_logo.png" width="70" height=="70"/>
+                            <p>Mes envies</p>
+                        </li>
+                        <li>
+                            <img src="img/quechua_logo.png" width="70" height=="70"/>
+                            <p>Mes envies</p>
+                        </li>
+                        <li>
+                            <img src="img/quechua_logo.png" width="70" height=="70"/>
+                            <p>Mes envies</p>
+                        </li>
+                    </ul>
+                </div>
+                
             </nav>
             <!--MOBILE MENU-->
-            <nav id="mobile_menu" class="row" style="align-items: center;">
-                <div class="col-1">
-                    <i class="fas fa-user"></i>
+            <nav id="mobile_menu" class="container-fluid">
+                <div class="row" style="align-items: center;padding-top: 10px;">
+                    <div class="col-1">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="col-4 offset-3">
+                        <object data="./svg/quechua_logo_extended.svg" width="100%"
+                        type="image/svg+xml"></object> </div>
+                    <div class="col-3 offset-1">
+                        <ul style="display:flex;align-items: center;justify-content: space-evenly;margin-bottom: 0px;width:100%">
+                            <li><i class="fas fa-user"></i></li>
+                            <li><i class="fas fa-user"></i></li>
+                            <li><i class="fas fa-user"></i></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-4 offset-3" style="background: center / contain no-repeat url('./img/quechua_logo_extended.png');height: 50px;"></div>
-                <ul class="col-3 offset-1" style="display:flex;align-items: center;justify-content: space-evenly;">
-                    <li style="background: center / contain no-repeat url('./img/quechua_logo.png');height: 50px;width:100%;"></li>
-                    <li style="background: center / contain no-repeat url('./img/quechua_logo.png');height: 50px;width:100%;"></li>
-                    <li style="background: center / contain no-repeat url('./img/quechua_logo.png');height: 50px;width:100%;"></li>
-                </ul>
+                <div class="row">
+                    <div class="col-8">
+                        <input type="text" id="searchbar" name="searchbar" style="width: 100%; border-radius: 10%;">
+                    </div>
+                </div>
             </nav>
         </header>
         
