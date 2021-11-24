@@ -10,14 +10,14 @@ Les wireframes sont accessibles ici : https://www.figma.com/file/OTIfPTYY3e5xFi9
 
 🟢 Head
 
-🟡 Header
+🟡 Header (Prêt, à styliser)
 
 🔴 Footer
 
 
 **--- FRONT HTML & CSS | DESKTOP ---**
 
-🔴 Page d’accueil
+🟡 Page d’accueil (Background cover prêt)
 
 🔴 Page de catégorie de produits
 
