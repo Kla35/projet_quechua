@@ -43,6 +43,10 @@ li > p {
     height: 50px;
 }
 
+#classic_menu{
+    background-color: white;
+}
+
 #classic_menu ul{
     display:flex;
     flex-direction: row;
@@ -67,6 +71,22 @@ li > p {
     font-size: 0.9vw;
 }
 
+#sidemenu{
+    width:90%;
+    height: 100vh;
+    background-color:white;
+    border-right: solid 2px #000;
+    position:fixed;
+    left:-90%;
+}
+
+#sidemenu_blur{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0;
+}
 /*NAV CSS BY SIZE*/
 
 @media (max-width: 767px){
@@ -80,16 +100,74 @@ li > p {
         display: flex;
     }
 
-    #mobile_menu{
+    #mobile_menu,#sidemenu{
         display: none;
     }
 }
 
 /*NAV ANIMATION*/
+
+.animation_rotate_icon{
+    animation: 0.5s linear 0s rotation_burger_icon;
+    animation-fill-mode: forwards;
+}
+
+.animation_open_sidemenu{
+    animation: 0.5s linear 0s open_sidemenu;
+    animation-fill-mode: forwards;
+}
+
+.animation_close_sidemenu{
+    animation: 0.5s linear 0s close_sidemenu;
+    animation-fill-mode: forwards;
+}
+
+.animation_active_bg_blur{
+    animation: 0.5s linear 0s active_bg_blur;
+    animation-fill-mode: forwards;
+}
+
+.animation_desactive_bg_blur{
+    animation: 0.5s linear 0s desactive_bg_blur;
+    animation-fill-mode: forwards;
+}
+
 @keyframes rotation_burger_icon {
     from { 
         transform: rotate(0deg); 
     } to { 
         transform: rotate(180deg); 
     }
-  }
+}
+
+@keyframes open_sidemenu{
+    from { 
+        left: -90%;
+    } to { 
+        left: 0%; 
+    }
+}
+
+@keyframes close_sidemenu{
+    from { 
+        left: 0%;
+    } to { 
+        left: -90%; 
+    }
+}
+
+@keyframes active_bg_blur{
+    from { 
+        opacity: 0;
+    } to { 
+        opacity: 0.4; 
+    }
+}
+
+@keyframes desactive_bg_blur{
+    from { 
+        opacity: 0.4;
+    } to { 
+        opacity: 0; 
+    }
+}

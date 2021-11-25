@@ -65,10 +65,11 @@
 
         </nav>
         <!--MOBILE MENU-->
+        
         <nav id="mobile_menu" class="container-fluid" style="border: solid 4px #000;">
             <div class="row" style="align-items: center;padding-top: 10px;">
                 <div class="col-1">
-                    <i id="burger_icon" class="fa fa-bars fa-2x icon-default"></i>
+                    <i id="burger_icon" class="fa fa-bars fa-2x icon-default" open=false></i>
                 </div>
                 <div class="col-4 offset-3">
                     <object data="./svg/quechua_logo_extended.svg" width="100%" type="image/svg+xml"></object>
@@ -89,13 +90,19 @@
                             <span class="input-group-text" id="basic-addon1" style="height: 100%;"><i
                                     class="fa fa-search"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Sac à dos, bottes, tente..."
+                        <input id="searchBox" type="text" class="form-control" placeholder="Sac à dos, bottes, tente..."
                             aria-label="Username" aria-describedby="basic-addon1">
                     </div>
 
                 </div>
             </div>
         </nav>
+        <nav id="sidemenu_blur"></nav>
+        <nav id="sidemenu">
+            <h1>Res</h1>
+            <h2>Res</h2>
+        </nav>
+        
     </header>
 
     <main>
@@ -106,16 +113,51 @@
     <footer>
         <script>
             var burger_menu = document.getElementById("burger_icon");
-            burger_menu.addEventListener("click",function(){
-                if(burger_menu.style.animation = ""){
-                    burger_menu.style.animation = "";
-                    burger_menu.style.animation = "0.5s linear 0s rotation_burger_icon";
+            var sidemenu = document.getElementById("sidemenu");
+            var bg_blur = document.getElementById("sidemenu_blur");
+            var searchBox = document.getElementById("searchBox");
+            burger_menu.addEventListener("click",function(){ 
+                if(burger_menu.getAttribute("open") == "false"){
+                    burger_menu.setAttribute("open","true");
+                    burger_menu.classList.add("fa-chevron-right");
+                    burger_menu.classList.remove("fa-bars");
+
+                    sidemenu.classList.remove("animation_close_sidemenu");
+                    void sidemenu.offsetWidth;
+                    sidemenu.classList.add("animation_open_sidemenu");
+
+                    bg_blur.classList.remove("animation_desactive_bg_blur");
+                    void bg_blur.offsetWidth;
+                    bg_blur.classList.add("animation_active_bg_blur");
                 } else {
-                    burger_menu.style.animation = "";
-                    burger_menu.style.animation = "0.5s linear 0s rotation_burger_icon";
+                    burger_menu.setAttribute("open","false");
+                    burger_menu.classList.add("fa-bars");
+                    burger_menu.classList.remove("fa-chevron-right");
+
+                    sidemenu.classList.remove("animation_open_sidemenu");
+                    void sidemenu.offsetWidth;
+                    sidemenu.classList.add("animation_close_sidemenu");
+
+                    bg_blur.classList.remove("animation_active_bg_blur");
+                    void bg_blur.offsetWidth;
+                    bg_blur.classList.add("animation_desactive_bg_blur");
                 }
-                
+                burger_menu.classList.remove("animation_rotate_icon");
+                void burger_menu.offsetWidth;
+                burger_menu.classList.add("animation_rotate_icon");
             })
+
+            searchBox.addEventListener('focus', (event) => {
+                bg_blur.classList.remove("animation_desactive_bg_blur");
+                void bg_blur.offsetWidth;
+                bg_blur.classList.add("animation_active_bg_blur");
+            });
+
+            searchBox.addEventListener('blur', (event) => {
+                bg_blur.classList.remove("animation_active_bg_blur");
+                void bg_blur.offsetWidth;
+                bg_blur.classList.add("animation_desactive_bg_blur");
+            });
         </script>
     </footer>
 </body>
